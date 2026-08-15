@@ -1,59 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Obsidian Star Band</title>
+  <title>About the Band - Obsidian Star</title>
   <style>
     body {
       font-family: Rockwell, serif;
-      background-image: url('obsidianstar.jpg'); /* */
-      background-repeat: repeat; /* Makes the image tile across the page */
-      color: #000000;
+      background-image: url('obsidianstar.jpg');
+      background-repeat: repeat;
+      color: #ffffff;
     }
     h1 {
-      color: #690707; /* Red */
+      color: #cc0000;
       text-align: center;
+      text-shadow: 0 0 10px #ff0000;
     }
     a {
-      color: #0000FF;
+      color: #ffcc00;
       text-decoration: underline;
+      text-shadow: 0 0 5px #ffcc00;
+    }
+    a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 10px #ffffff;
     }
     .container {
       width: 800px;
       margin: 0 auto;
-      border: 2px solid #000;
-      background-color: #FFFFFF;
-      padding: 10px;
+      background: linear-gradient(180deg, rgba(11,6,41,0.92) 0%, rgba(18,11,38,0.96) 50%, rgba(11,6,41,0.92) 100%);
+      padding: 20px;
+      color: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #3a2b5c;
+      box-shadow: 0 0 25px rgba(105,7,7,0.6), inset 0 0 25px rgba(105,7,7,0.2);
     }
     .nav {
-      background-color: #9f93ba; /* Light grey Purple */
-      padding: 5px;
-      margin-bottom: 10px;
+      background: rgba(42,27,61,0.8);
+      padding: 8px;
+      margin-bottom: 15px;
       text-align: center;
+      border: none;
+      border-bottom: 2px solid #690707;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 2px 15px rgba(105,7,7,0.5);
+    }
+    .nav a {
+      color: #ffcc00;
     }
     .footer {
       text-align: center;
       font-size: small;
-      padding: 10px;
-      background-color: #E0E0E0;
+      padding: 12px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(11,6,41,0.9));
+      color: #ffffff;
+      border-top: 1px solid #690707;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 -2px 10px rgba(105,7,7,0.4);
     }
     .marquee {
-      color: #FF0000; /* Red scrolling text */
+      color: #ff0000;
       font-weight: bold;
+      text-shadow: 0 0 10px #ff0000;
+    }
+    table {
+      width: 100%;
+      background: transparent;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: none;
+      color: #ffffff;
+    }
+    td {
+      background: rgba(18,11,38,0.6);
+      border: 1px solid rgba(105,7,7,0.3);
+      border-radius: 8px;
+      padding: 15px;
+      vertical-align: top;
+      color: #ffffff;
+      box-shadow: inset 0 0 15px rgba(0,0,0,0.6);
+    }
+    .member {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .member img {
+      border: 2px solid rgba(105,7,7,0.6);
+      border-radius: 5px;
+      margin-right: 12px;
+      box-shadow: 0 0 10px rgba(105,7,7,0.5);
+      image-rendering: pixelated;
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>Welcome to Obsidian Star Band!</h1>
+  <h1>About the Band</h1>
 
-  <!-- Marquee for classic scrolling text -->
   <marquee class="marquee">Obsidian Star</marquee>
 
-  <!-- Navigation links -->
   <div class="nav">
     <a href="index.html">Home</a> | 
     <a href="about.html">About the Band</a> | 
@@ -62,33 +109,49 @@
     <a href="songs.html">Songs</a> 
   </div>
 
-  <!-- Main content -->
-  <table width="100%" cellpadding="10" cellspacing="0" border="1">
+  <table cellpadding="10" cellspacing="0" border="0">
     <tr>
       <td>
-        <p><b>Welcome!</b></p>
-        <p>os</p>
-        <p>os</p>
-        <img src="happy-1.gif" alt="happy" align="right" style="border: 2px solid #000; image-rendering: pixelated;">
-    
+        <h2>Meet the Band</h2>
+        <p>[Band bio intro goes here, make it neat and as long as wanted]</p>
+
+        <div class="member">
+          <img src="member1.jpg" alt="Member 1 headshot" width="80" height="80">
+          <div>
+            <b>Shane Raab</b> - Goated voice and guitar man<br>
+            [bio for Shane]
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="member2.jpg" alt="Member 2 headshot" width="80" height="80">
+          <div>
+            <b>Bradley Wilkinson</b> - W Bradley Rythym Guitar dude<br>
+            [Bardlby Bio]
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="member3.jpg" alt="Member 3 headshot" width="80" height="80">
+          <div>
+            <b>Nick</b> - Based Bass Man<br>
+            [Nick bio]
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="member4.jpg" alt="Member 4 headshot" width="80" height="80">
+          <div>
+            <b>Noah</b> - Drums and chill vibes<br>
+            [Noah Bio]
+          </div>
+        </div>
       </td>
     </tr>
   </table>
 
-<!-- 80x15 GIF Buttons Section -->
-  <div class="buttons">
-    <a href="osu.gi"><img src="osu.gif" alt="osu" width="80" height="15"></a>
-    <a href="9_eire.png"><img src="9_eire.png" alt="eire" width="80" height="15"></a>
-    <a href="ilovemusic.png"><img src="ilovemusic.png" alt="music" width="80" height="15"></a>
-    <a href="xp.gif"><img src="xp.gif" alt="xp" width="80" height="15"></a>
-    <a href="coffeepower.png"><img src="coffeepower.png" alt="coffee" width="80" height="15"></a>
-    <a href="loveani.gif"><img src="loveani.gif" alt="love" width="80" height="15"></a>
-    <a href="ibm.gif"><img src="ibm.gif" alt="ibm" width="80" height="15"></a>
-  </div>
-  
   <div class="footer">
     <p>Copyright &copy; Obsidian Star Band. All rights reserved.</p>
-    
   </div>
 </div>
 
