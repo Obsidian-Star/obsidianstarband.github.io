@@ -35,18 +35,46 @@
       border: 1px solid #3a2b5c;
       box-shadow: 0 0 25px rgba(105,7,7,0.6), inset 0 0 25px rgba(105,7,7,0.2);
     }
-    .nav {
-      background: rgba(42,27,61,0.8);
-      padding: 8px;
-      margin-bottom: 15px;
-      text-align: center;
-      border: none;
-      border-bottom: 2px solid #690707;
-      border-radius: 8px 8px 0 0;
-      box-shadow: 0 2px 15px rgba(105,7,7,0.5);
+    .marquee {
+      color: #ff0000;
+      font-weight: bold;
+      text-shadow: 0 0 10px #ff0000;
     }
-    .nav a {
+    .main-layout {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+    .sidebar {
+      width: 180px;
+      background: rgba(42,27,61,0.6);
+      border: 1px solid rgba(105,7,7,0.4);
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(105,7,7,0.3);
+    }
+    .sidebar a {
+      display: block;
+      background: rgba(11,6,41,0.8);
       color: #ffcc00;
+      text-decoration: none;
+      text-shadow: 0 0 5px #ffcc00;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(105,7,7,0.5);
+      border-radius: 5px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .sidebar a:hover {
+      background: rgba(105,7,7,0.4);
+      color: #ffffff;
+      text-shadow: 0 0 10px #ffffff;
+      border-color: #ff0000;
+    }
+    .content {
+      flex: 1;
     }
     .footer {
       text-align: center;
@@ -57,11 +85,6 @@
       border-top: 1px solid #690707;
       border-radius: 0 0 8px 8px;
       box-shadow: 0 -2px 10px rgba(105,7,7,0.4);
-    }
-    .marquee {
-      color: #ff0000;
-      font-weight: bold;
-      text-shadow: 0 0 10px #ff0000;
     }
     table {
       width: 100%;
@@ -93,27 +116,30 @@
 <body>
 
 <div class="container">
-  <h1>Contact Obsidian Star</h1>
-
   <marquee class="marquee">Obsidian Star</marquee>
 
-  <div class="nav">
-    <a href="index.html">Home</a> | 
-    <a href="about.html">About the Band</a> | 
-    <a href="contact.html">Contact</a> | 
-    <a href="shows.html">Shows</a> |
-    <a href="songs.html">Songs</a> 
-  </div>
+  <h1>Contact Obsidian Star</h1>
 
-  <table cellpadding="10" cellspacing="0" border="0">
-    <tr>
-      <td>
-        <h2>Booking &amp; General Inquiries</h2>
-        <p>Email: <a href="mailto:obsidianstar.band@gmail.com">obsidianstar.band@gmail.com</a></p>
-        <p>Social Media: [LINKS HERE]</p>
-      </td>
-    </tr>
-  </table>
+  <div class="main-layout">
+    <div class="sidebar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About the Band</a>
+      <a href="contact.html">Contact</a>
+      <a href="shows.html">Shows</a>
+      <a href="songs.html">Songs</a>
+    </div>
+    <div class="content">
+      <table cellpadding="10" cellspacing="0" border="0">
+        <tr>
+          <td>
+            <h2>Booking &amp; General Inquiries</h2>
+            <p>Email: <a href="mailto:obsidianstar.band@gmail.com">obsidianstar.band@gmail.com</a></p>
+            <p>Social Media: [LINKS HERE]</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
   <div class="footer">
     <p>Copyright &copy; Obsidian Star Band. All rights reserved.</p>
