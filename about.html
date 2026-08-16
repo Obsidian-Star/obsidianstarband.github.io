@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>About the Band - Obsidian Star</title>
   <style>
     body {
@@ -136,40 +137,11 @@
       <table cellpadding="10" cellspacing="0" border="0">
         <tr>
           <td>
+            <h2>About Obsidian Star</h2>
+            <div id="band-bio"><p>[Band bio intro goes here, make it neat and as long as wanted]</p></div>
+
             <h2>Meet the Band</h2>
-            <p>[Band bio intro goes here, make it neat and as long as wanted]</p>
-
-            <div class="member">
-              <img src="member1.jpg" alt="Member 1 headshot" width="80" height="80">
-              <div>
-                <b>Shane R.</b> - Goated voice and guitar man<br>
-                [bio for Shane]
-              </div>
-            </div>
-
-            <div class="member">
-              <img src="member2.jpg" alt="Member 2 headshot" width="80" height="80">
-              <div>
-                <b>Bradley W.</b> - W Bradley Rythym Guitar dude<br>
-                [Bardlby Bio]
-              </div>
-            </div>
-
-            <div class="member">
-              <img src="member3.jpg" alt="Member 3 headshot" width="80" height="80">
-              <div>
-                <b>Nick L.</b> - Based Bass Man<br>
-                [Nick bio]
-              </div>
-            </div>
-
-            <div class="member">
-              <img src="member4.jpg" alt="Member 4 headshot" width="80" height="80">
-              <div>
-                <b>Noah S.</b> - Drums and chill vibes<br>
-                [Noah Bio]
-              </div>
-            </div>
+            <div id="page-content"></div>
           </td>
         </tr>
       </table>
@@ -180,6 +152,13 @@
     <p>Copyright &copy; Obsidian Star Band. All rights reserved.</p>
   </div>
 </div>
+
+  <script src="assets/js/load-data.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.loadPageData) loadPageData('about', { targetId: 'page-content', skipTitle: true, bioId: 'band-bio' }).catch(() => {});
+  });
+</script>
 
 </body>
 </html>

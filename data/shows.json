@@ -1,0 +1,11 @@
+{
+  "title": "Shows",
+  "description": "Upcoming and previous performances.",
+  "upcoming": [
+    { "date": "2026-09-10", "venue": "The Blue Room", "city": "Portland, OR", "notes": "Doors 8pm", "link": "https://www.youtube.com/watch?v=example1" },
+    { "date": "2026-10-02", "venue": "Riverside Hall", "city": "Seattle, WA", "notes": "All ages" }
+  ],
+  "previous": [
+    { "date": "2026-06-15", "venue": "Old Town Pub", "city": "Portland, OR", "notes": "Sold out", "link": "https://www.youtube.com/watch?v=example2" }
+  ]
+}

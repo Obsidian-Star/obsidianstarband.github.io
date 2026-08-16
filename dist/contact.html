@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Songs & Videos - Obsidian Star Band</title>
+  <title>Contact - Obsidian Star Band</title>
   <style>
     body {
       font-family: Rockwell, serif;
@@ -103,11 +103,14 @@
       color: #ffffff;
       box-shadow: inset 0 0 15px rgba(0,0,0,0.6);
     }
-    audio, video {
+    input, textarea {
       background: rgba(18,11,38,0.8);
+      color: #ffffff;
       border: 1px solid rgba(105,7,7,0.5);
       border-radius: 5px;
-      box-shadow: 0 0 10px rgba(105,7,7,0.4);
+      font-family: Rockwell, serif;
+      padding: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.7);
     }
   </style>
 </head>
@@ -116,7 +119,7 @@
 <div class="container">
   <marquee class="marquee">Obsidian Star</marquee>
 
-  <h1>Music Demos & Videos</h1>
+  <h1>Contact Obsidian Star</h1>
 
   <div class="main-layout">
     <div class="sidebar">
@@ -130,13 +133,8 @@
       <table cellpadding="10" cellspacing="0" border="0">
         <tr>
           <td>
-            <h2>Videos</h2>
-            <div id="videos-list">
-              <!-- ADD YOUTUBE VIDEO EMBEDS HERE -->
-
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DnnOZ5vhHOI?si=prr5CRozmu_j6N73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            </div>
+            <h2>Booking &amp; General Inquiries</h2>
+            <div id="page-content"><p><a href="mailto:obsidianstar.band@gmail.com">Email</a></p><p><a href="https://www.instagram.com/obsidianstarband/">Instagram</a></p><p><a href="https://www.youtube.com/@ObsidianStarBand">YouTube</a></p></div>
           </td>
         </tr>
       </table>
@@ -147,5 +145,13 @@
     <p>Copyright &copy; Obsidian Star Band. All rights reserved.</p>
   </div>
 </div>
-  </body>
-  </html>
+
+  <script src="assets/js/load-data.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.loadPageData) loadPageData('contact', { targetId: 'page-content', skipTitle: true }).catch(() => {});
+  });
+</script>
+
+</body>
+</html>
