@@ -3,6 +3,8 @@
   "items": [
     { "type": "Email", "value": "obsidianstar.band@gmail.com" },
     { "type": "Instagram", "value": "https://www.instagram.com/obsidianstarband/" },
-    { "type": "YouTube", "value": "https://www.youtube.com/@ObsidianStarBand" }
+    { "type": "YouTube", "value": "https://www.youtube.com/@ObsidianStarBand" },
+    { "type": "Discord", "value": "https://discord.com/invite/CygeKe3EWx"},
+    { "type": "TikTok", "value": "https://www.tiktok.com/@obsidianstarband"}
   ]
 }

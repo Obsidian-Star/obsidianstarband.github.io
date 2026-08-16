@@ -2,10 +2,18 @@
   "title": "Shows",
   "description": "Upcoming and previous performances.",
   "upcoming": [
-    { "date": "2026-09-10", "venue": "The Blue Room", "city": "Portland, OR", "notes": "Doors 8pm", "link": "https://www.youtube.com/watch?v=example1" },
-    { "date": "2026-10-02", "venue": "Riverside Hall", "city": "Seattle, WA", "notes": "All ages" }
   ],
   "previous": [
-    { "date": "2026-06-15", "venue": "Old Town Pub", "city": "Portland, OR", "notes": "Sold out", "link": "https://www.youtube.com/watch?v=example2" }
+    { "date": "November 16, 2025", "venue": "Photo City Music Hall", "city": "Rochester, NY", "notes": "18+, Doors at 6pm" },
+    { "date": "November 1, 2025", "venue": "Halloween Hangover Fest @ Flying Squirrel", "city": "Rochester, NY", "notes": "$10 suggested donation, On at 2:15pm" },
+    { "date": "September 24, 2025", "venue": "Popular Music Collective Night @ Lovin' Cup", "city": "Rochester, NY", "notes": "18+, $5 cover, 7-9pm" },
+    { "date": "September 14, 2025", "venue": "Photo City Music Hall", "city": "Rochester, NY", "notes": "18+, Doors at 6pm" },
+    { "date": "April 13, 2025", "venue": "Photo City Music Hall", "city": "Rochester, NY", "notes": "18+, Doors at 6pm" },
+    { "date": "March 29, 2025", "venue": "RIT Idol @ Webb Auditorium", "city": "Rochester, NY", "notes": "$7 cover, 6:30pm" },
+    { "date": "November 20, 2024", "venue": "Popular Music Collective Night @ Lovin' Cup", "city": "Rochester, NY", "notes": "18+, $5 cover, 8-10pm" },
+    { "date": "November 2, 2024", "venue": "Halloween Hangover Fest @ Genesee Valley Park Roundhouse Shelter", "city": "Rochester, NY", "notes": "On at 5:40pm" },
+    { "date": "October 19, 2024", "venue": "Brick City Homecoming @ Munson Music Loft", "city": "Rochester, NY", "notes": "10:30am-2pm" },
+    { "date": "April 20, 2024", "venue": "Unlabeled Music Festival", "city": "Rochester, NY", "notes": "12:30pm" },
+    { "date": "March 3, 2024", "venue": "RIT Idol @ Webb Auditorium", "city": "Rochester, NY", "notes": "7pm" }
   ]
 }
