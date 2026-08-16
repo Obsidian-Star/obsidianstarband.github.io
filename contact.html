@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Contact - Obsidian Star Band</title>
   <style>
     body {
@@ -133,8 +134,7 @@
         <tr>
           <td>
             <h2>Booking &amp; General Inquiries</h2>
-            <p>Email: <a href="mailto:obsidianstar.band@gmail.com">obsidianstar.band@gmail.com</a></p>
-            <p>Social Media: [LINKS HERE]</p>
+            <div id="page-content"></div>
           </td>
         </tr>
       </table>
@@ -145,6 +145,13 @@
     <p>Copyright &copy; Obsidian Star Band. All rights reserved.</p>
   </div>
 </div>
+
+  <script src="assets/js/load-data.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.loadPageData) loadPageData('contact', { targetId: 'page-content', skipTitle: true }).catch(() => {});
+  });
+</script>
 
 </body>
 </html>

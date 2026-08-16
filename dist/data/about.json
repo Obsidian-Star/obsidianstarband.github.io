@@ -1,0 +1,30 @@
+{
+  "title": "About Obsidian Star",
+  "description": "Obsidian Star is an Alternative Rock Band based in the Rochester NY area.",
+  "items": [
+    {
+      "name": "Shane R.",
+      "role": "Vocals & Guitar",
+      "bio": "Lead singer and primary songwriter. Plays rhythm and lead guitar.",
+      "photo": "member1.jpg"
+    },
+    {
+      "name": "Bradley W.",
+      "role": "Rhythm Guitar",
+      "bio": "Riffs, harmony and backing vocals.",
+      "photo": "member2.jpg"
+    },
+    {
+      "name": "Nick L.",
+      "role": "Bass",
+      "bio": "Low-end foundation and occasional lead lines.",
+      "photo": "member3.jpg"
+    },
+    {
+      "name": "Noah S.",
+      "role": "Drums",
+      "bio": "Keeps time and brings the groove.",
+      "photo": "member4.jpg"
+    }
+  ]
+}

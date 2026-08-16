@@ -1,0 +1,8 @@
+{
+  "title": "Contact",
+  "items": [
+    { "type": "Email", "value": "obsidianstar.band@gmail.com" },
+    { "type": "Instagram", "value": "https://www.instagram.com/obsidianstarband/" },
+    { "type": "YouTube", "value": "https://www.youtube.com/@ObsidianStarBand" }
+  ]
+}
