@@ -5,26 +5,26 @@
     {
       "name": "Shane R.",
       "role": "Vocals & Guitar",
-      "bio": "Lead singer and primary songwriter. Plays rhythm and lead guitar.",
-      "photo": "member1.jpg"
+      "bio": "I’m the singer and one of the guitarists in the band. I’m also the primary songwriter. I was born and raised in the suburbs of Philadelphia. Music was always around in my house, but  I didn’t start playing until 9th grade when I found my dad’s old acoustic tucked away in the basement. Since then, I've been obsessed with writing and performing. I started the band in late 2023 during my freshman year at RIT. We were heavily inspired by bands such as Smashing Pumpkins, Pink Floyd, and Deftones. That pretty much sums it up. Also, love Resident Evil. Also, go Birds, dickhead!",
+      "photo": "assets/photos/shane.jpg"
     },
     {
       "name": "Bradley W.",
       "role": "Guitar",
-      "bio": "I am a Fourth-Year Computer Engineering Major. On top of playing Guitar I also play Drums and Oboe, and if I'm not playing music I'm probably playing Guitar Hero, Kingdom Hearts, or Half-Life. My favorite bands include Alter Bridge, Dream Theater, Tremonti, and a lot more.",
-      "photo": "member2.jpg"
+      "bio": "One of the guitarists in the band, I have been a musician for about as long as I could walk. I got my first drum kit as a toddler, and over the years picked up the Oboe, and finally, the Guitar. Currently hailing from New York’s Capital Region (go ValleyCats) and studying Computer Engineering at RIT, I helped form the band in my freshman year along with Shane. In my free time if I’m not playing guitar, I can probably be found playing Guitar Hero (YARG), Half-Life, Kingdom Hearts, or Arkham. I’m a big metalhead, with a sweet spot for progressive music, particularly bands like Alter Bridge, Dream Theater, Animals as Leaders, Tremonti, and many more. If you wanna chat you can find me lurking in the band discord server",
+      "photo": "assets/photos/bradley.jpg"
     },
     {
       "name": "Nick L.",
       "role": "Bass",
-      "bio": "Low-end foundation and occasional lead lines.",
-      "photo": "member3.jpg"
+      "bio": "NICK",
+      "photo": "assets/photos/nick.jpg"
     },
     {
       "name": "Noah S.",
       "role": "Drums",
-      "bio": "Keeps time and brings the groove.",
-      "photo": "member4.jpg"
+      "bio": "After escaping the experimental facility where he was born, Noah Shin spent several years traversing the intricate sewer systems of Buffalo, New York before eventually finding himself at RIT, where he was mistaken for a drummer by a tour group. The rest was history.",
+      "photo": "assets/photos/noah.jpg"
     }
   ]
 }
