@@ -1,6 +1,8 @@
 // Simple helper to load page-specific JSON from /data and render it into the DOM.
 (function (global) {
   async function loadPageData(name, opts = {}) {
+    // Remove any previous loading state when JS starts a new load
+    try { document.documentElement.classList.add('js-loading'); } catch (e) {}
     // Use a repo-relative path (no leading slash) so the loader works when
     // opening files locally, on GitHub Pages under a repo path, and in dist/.
     const base = opts.base || 'data/';
@@ -36,9 +38,20 @@
       // Support page-specific lists (e.g., data.upcoming / data.previous)
       const items = opts.listId && Array.isArray(data[opts.listId]) ? data[opts.listId] : (Array.isArray(data.items) ? data.items : []);
       if (items.length === 0) {
-        const p = document.createElement('p');
-        p.textContent = data.description || 'No items.';
-        target.appendChild(p);
+          const p = document.createElement('p');
+          // If this is the upcoming shows list, show a friendly placeholder
+          if (opts.listId === 'upcoming') {
+            const ul = document.createElement('ul');
+            ul.className = 'show-list';
+            const li = document.createElement('li');
+            li.className = 'show-item';
+            li.textContent = 'Stay Tuned!';
+            ul.appendChild(li);
+            target.appendChild(ul);
+          } else {
+            p.textContent = data.description || 'No items.';
+            target.appendChild(p);
+          }
         return data;
       }
       // If items look like band members, render member cards
@@ -153,8 +166,10 @@
           });
         } else {
           const ul = document.createElement('ul');
+          ul.className = 'show-list';
           items.forEach((item) => {
             const li = document.createElement('li');
+            li.className = 'show-item';
             // Smart rendering for common shapes
               if (item.date && item.venue) {
                 li.textContent = `${item.date} — ${item.venue}${item.city ? ', ' + item.city : ''}`;
@@ -164,7 +179,7 @@
                   const a = document.createElement('a');
                   a.href = item.link;
                   a.textContent = 'Watch';
-                  a.style.marginLeft = '6px';
+                  a.className = 'show-link';
                   li.appendChild(a);
                 }
               } else if (item.title && item.length) {
@@ -182,11 +197,14 @@
         }
       }
 
+      // show rendered content (remove loading indicator)
+      try { document.documentElement.classList.remove('js-loading'); } catch (e) {}
       return data;
     } catch (err) {
       console.error('loadPageData error', err);
       const target = document.getElementById(opts.targetId || 'page-content');
       if (target) target.textContent = 'Error loading data.';
+      try { document.documentElement.classList.remove('js-loading'); } catch (e) {}
       throw err;
     }
   }

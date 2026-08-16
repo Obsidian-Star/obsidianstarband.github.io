@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add('js-loading');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Songs & Videos - Obsidian Star Band</title>
   <style>
+    .js-loading #page-content, .js-loading #videos-list { visibility: hidden; }
     body {
       font-family: Rockwell, serif;
       background-image: url('obsidianstar.jpg');
@@ -95,6 +97,13 @@
       border: none;
       color: #ffffff;
     }
+    /* Shows list styling */
+    .show-list { list-style: none; padding: 0; margin: 0; }
+    .show-item { margin-bottom: 12px; padding: 12px; background: rgba(11,6,41,0.6); border-radius: 8px; border: 1px solid rgba(105,7,7,0.2); }
+    .show-item:last-child { margin-bottom: 0; }
+    .show-link { float: right; background: rgba(255,204,0,0.06); color: #ffcc00; padding: 6px 8px; border-radius: 4px; text-decoration: none; border: 1px solid rgba(105,7,7,0.3); }
+    .show-link:hover { color: #fff; border-color: #ff0000; }
+    /* (tuned-bubble removed — placeholder renders as normal show-item now) */
     td {
       background: rgba(18,11,38,0.6);
       border: 1px solid rgba(105,7,7,0.3);

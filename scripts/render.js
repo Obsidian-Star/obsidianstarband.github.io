@@ -28,7 +28,12 @@ async function renderData(name, opts = {}) {
     // build members or list
     let contentHtml = '';
     if (items.length === 0) {
-      contentHtml = '';
+      // special-case: upcoming shows should display a friendly placeholder
+      if (opts.listId === 'upcoming') {
+        contentHtml = `<ul class="show-list"><li class="show-item">Stay Tuned!</li></ul>`;
+      } else {
+        contentHtml = '';
+      }
     } else {
       const looksLikeMembers = items.every(it => it.name && it.role);
       const looksLikeVideos = items.every(it => it.title && it.link);
@@ -92,19 +97,19 @@ async function renderData(name, opts = {}) {
             }
           });
         } else {
-          contentHtml += '<ul>';
+          contentHtml += '<ul class="show-list">';
           items.forEach(item => {
             if (item.date && item.venue) {
-              contentHtml += `<li>${escapeHtml(item.date)} — ${escapeHtml(item.venue)}${item.city ? ', ' + escapeHtml(item.city) : ''}`;
+              contentHtml += `<li class="show-item">${escapeHtml(item.date)} — ${escapeHtml(item.venue)}${item.city ? ', ' + escapeHtml(item.city) : ''}`;
               if (item.notes) contentHtml += ` — ${escapeHtml(item.notes)}`;
-              if (item.link) contentHtml += ` <a href="${escapeHtml(item.link)}">Watch</a>`;
+              if (item.link) contentHtml += ` <a class="show-link" href="${escapeHtml(item.link)}">Watch</a>`;
               contentHtml += `</li>`;
             } else if (item.title && item.length) {
-              contentHtml += `<li>${escapeHtml(item.title)} (${escapeHtml(item.length)})</li>`;
+              contentHtml += `<li class="show-item">${escapeHtml(item.title)} (${escapeHtml(item.length)})</li>`;
             } else if (item.title) {
-              contentHtml += `<li>${escapeHtml(item.title)}${item.role ? ' — ' + escapeHtml(item.role) : ''}</li>`;
+              contentHtml += `<li class="show-item">${escapeHtml(item.title)}${item.role ? ' — ' + escapeHtml(item.role) : ''}</li>`;
             } else {
-              contentHtml += `<li>${escapeHtml(JSON.stringify(item))}</li>`;
+              contentHtml += `<li class="show-item">${escapeHtml(JSON.stringify(item))}</li>`;
             }
           });
           contentHtml += '</ul>';
