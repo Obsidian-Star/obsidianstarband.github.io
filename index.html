@@ -225,5 +225,13 @@
   </div>
 </div>
 
+  <script src="assets/js/load-data.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.loadPageData) loadPageData('index', { targetId: 'page-content' }).catch(() => {});
+  });
+</script>
+
+
 </body>
 </html>
