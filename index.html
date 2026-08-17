@@ -19,8 +19,8 @@
       color: #cc0000;
       text-align: center;
       text-shadow: 0 0 10px #ff0000;
-      margin-top: 5px;
-      margin-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 5px;
     }
     a {
       color: #ffcc00;
@@ -36,7 +36,7 @@
       width: 100%;
       margin: 0 auto;
       background: linear-gradient(180deg, rgba(11,6,41,0.92) 0%, rgba(18,11,38,0.96) 50%, rgba(11,6,41,0.92) 100%);
-      padding: 15px;
+      padding: 10px 15px 15px 15px; /* reduced top padding */
       color: #ffffff;
       border-radius: 12px;
       border: 1px solid #3a2b5c;
@@ -54,7 +54,7 @@
       display: flex;
       gap: 20px;
       align-items: flex-start;
-      margin-top: 15px;
+      margin-top: 0; /* removed extra top gap */
     }
     .sidebar {
       width: 180px;
@@ -152,14 +152,13 @@
       text-shadow: 0 0 10px #ffffff;
       border-color: #ff0000;
     }
-    /* Responsive adjustments */
     @media (max-width: 600px) {
       .main-layout {
         flex-direction: column;
       }
       .sidebar {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         padding: 10px;
       }
       .sidebar a {
@@ -192,7 +191,8 @@
       <a href="songs.html">Songs</a>
     </div>
     <div class="content">
-      <div id="page-content"></div>
+      <!-- Removed empty #page-content div -->
+
       <table cellpadding="10" cellspacing="0" border="0">
         <tr>
           <td>
@@ -224,13 +224,6 @@
     <p>Copyright &copy; Obsidian Star Band. All rights reserved.</p>
   </div>
 </div>
-
-<script src="assets/js/load-data.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    if (window.loadPageData) loadPageData('index', { targetId: 'page-content' }).catch(() => {});
-  });
-</script>
 
 </body>
 </html>
