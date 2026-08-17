@@ -6,12 +6,13 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Contact - Obsidian Star Band</title>
   <style>
-    .js-loading #page-content, .js-loading #videos-list { visibility: hidden; }
+    .js-loading #page-content { visibility: hidden; }
     body {
       font-family: Rockwell, serif;
       background-image: url('assets/photos/obsidianstar.jpg');
       background-repeat: repeat;
       color: #ffffff;
+      margin: 0;
     }
     h1 {
       color: #cc0000;
@@ -28,25 +29,28 @@
       text-shadow: 0 0 10px #ffffff;
     }
     .container {
-      width: 800px;
+      max-width: 800px;
+      width: 100%;
       margin: 0 auto;
       background: linear-gradient(180deg, rgba(11,6,41,0.92) 0%, rgba(18,11,38,0.96) 50%, rgba(11,6,41,0.92) 100%);
-      padding: 20px;
+      padding: 15px;
       color: #ffffff;
       border-radius: 12px;
       border: 1px solid #3a2b5c;
       box-shadow: 0 0 25px rgba(105,7,7,0.6), inset 0 0 25px rgba(105,7,7,0.2);
+      box-sizing: border-box;
     }
     .marquee {
       color: #ff0000;
       font-weight: bold;
       text-shadow: 0 0 10px #ff0000;
+      margin: 0;
     }
     .main-layout {
       display: flex;
       gap: 20px;
       align-items: flex-start;
-      margin-top: 20px;
+      margin-top: 15px;
     }
     .sidebar {
       width: 180px;
@@ -55,6 +59,7 @@
       border-radius: 8px;
       padding: 15px;
       box-shadow: 0 0 15px rgba(105,7,7,0.3);
+      flex-shrink: 0;
     }
     .sidebar a {
       display: block;
@@ -113,6 +118,21 @@
       padding: 8px;
       box-shadow: inset 0 0 5px rgba(0,0,0,0.7);
     }
+    @media (max-width: 600px) {
+      .main-layout {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+      }
+      .sidebar a {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -147,7 +167,7 @@
   </div>
 </div>
 
-  <script src="assets/js/load-data.js"></script>
+<script src="assets/js/load-data.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     if (window.loadPageData) loadPageData('contact', { targetId: 'page-content', skipTitle: true }).catch(() => {});
