@@ -11,9 +11,7 @@
       background-image: url('assets/photos/obsidianstar.jpg');
       background-repeat: repeat;
       color: #ffffff;
-    }
-    .js-loading #page-content, .js-loading #videos-list { visibility: hidden; }
-    body {
+      margin: 0;
     }
     h1 {
       color: #cc0000;
@@ -30,25 +28,28 @@
       text-shadow: 0 0 10px #ffffff;
     }
     .container {
-      width: 800px;
+      max-width: 800px;
+      width: 100%;
       margin: 0 auto;
       background: linear-gradient(180deg, rgba(11,6,41,0.92) 0%, rgba(18,11,38,0.96) 50%, rgba(11,6,41,0.92) 100%);
-      padding: 20px;
+      padding: 15px;
       color: #ffffff;
       border-radius: 12px;
       border: 1px solid #3a2b5c;
       box-shadow: 0 0 25px rgba(105,7,7,0.6), inset 0 0 25px rgba(105,7,7,0.2);
+      box-sizing: border-box;
     }
     .marquee {
       color: #ff0000;
       font-weight: bold;
       text-shadow: 0 0 10px #ff0000;
+      margin: 0;
     }
     .main-layout {
       display: flex;
       gap: 20px;
       align-items: flex-start;
-      margin-top: 20px;
+      margin-top: 15px;
     }
     .sidebar {
       width: 180px;
@@ -57,6 +58,7 @@
       border-radius: 8px;
       padding: 15px;
       box-shadow: 0 0 15px rgba(105,7,7,0.3);
+      flex-shrink: 0;
     }
     .sidebar a {
       display: block;
@@ -106,11 +108,40 @@
       color: #ffffff;
       box-shadow: inset 0 0 15px rgba(0,0,0,0.6);
     }
-    audio, video {
-      background: rgba(18,11,38,0.8);
-      border: 1px solid rgba(105,7,7,0.5);
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(105,7,7,0.4);
+    /* Responsive video container */
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    @media (max-width: 600px) {
+      .main-layout {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+      }
+      .sidebar a {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 0;
+      }
+      .video-container {
+        margin-bottom: 15px;
+      }
     }
   </style>
 </head>
@@ -135,34 +166,50 @@
           <td>
             <h2>Videos</h2>
             <div id="videos-list">
-              <!-- ADD YOUTUBE VIDEO EMBEDS HERE -->
-
               <h3>Alice Springs</h3>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DnnOZ5vhHOI?si=prr5CRozmu_j6N73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
+              <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/DnnOZ5vhHOI?si=prr5CRozmu_j6N73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+
               <h3>One Perfect Day</h3>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zPJkTzTziXk?si=1PZrW_7GOzX54x8F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/zPJkTzTziXk?si=1PZrW_7GOzX54x8F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
 
               <h3>Song of Storms (Wait for a Sign)</h3>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/A23ToOfzcKU?si=eCWhZQT6XfDwzXYj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/A23ToOfzcKU?si=eCWhZQT6XfDwzXYj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
               
               <h3>The One That Got Away</h3>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/L64oe2XlqRQ?si=fUjj7rNqlmSoBdSt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/L64oe2XlqRQ?si=fUjj7rNqlmSoBdSt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
             
               <h3>September Nights</h3>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LvwdynXMEto?si=Qw24BYSoXIjnr9pn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/LvwdynXMEto?si=Qw24BYSoXIjnr9pn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
 
               <h3>My Love</h3>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/X1NoIpUqzAQ?si=HbctQMDWFX8adkTt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/X1NoIpUqzAQ?si=HbctQMDWFX8adkTt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
 
               <h3>Each New Day (Passes By)</h3>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/esQYNOpc-_w?si=hxB_JSHLbexuQfGO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/esQYNOpc-_w?si=hxB_JSHLbexuQfGO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
 
               <h3>Veins</h3>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OdMb4TMBd6w?si=2vf52UtYufCBht8H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/OdMb4TMBd6w?si=2vf52UtYufCBht8H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
 
               <h3>Say My Name</h3>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fbxfEcA4wYQ?si=-NjuKDWI0I2PM_3K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/fbxfEcA4wYQ?si=-NjuKDWI0I2PM_3K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
             </div>
           </td>
         </tr>
@@ -174,5 +221,6 @@
     <p>Copyright &copy; Obsidian Star Band. All rights reserved.</p>
   </div>
 </div>
-  </body>
-  </html>
+
+</body>
+</html>

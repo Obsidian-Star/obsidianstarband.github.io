@@ -36,7 +36,11 @@
       }
 
       // Support page-specific lists (e.g., data.upcoming / data.previous)
-      const items = opts.listId && Array.isArray(data[opts.listId]) ? data[opts.listId] : (Array.isArray(data.items) ? data.items : []);
+      let items = opts.listId && Array.isArray(data[opts.listId]) ? data[opts.listId] : (Array.isArray(data.items) ? data.items : []);
+      if (Array.isArray(opts.excludeTypes)) {
+        const excludedTypes = opts.excludeTypes.map(type => String(type).toLowerCase());
+        items = items.filter(item => !excludedTypes.includes(String(item.type || '').toLowerCase()));
+      }
       if (items.length === 0) {
           const p = document.createElement('p');
           // If this is the upcoming shows list, show a friendly placeholder

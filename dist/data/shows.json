@@ -2,6 +2,9 @@
   "title": "Shows",
   "description": "Upcoming and previous performances.",
   "upcoming": [
+    { "date": "September 19, 2026", "venue": "Fringe Fest @ The Little Theater", "city": "Rochester, NY", "notes": "9PM show, Free Entry, contact for more info"},
+    { "date": "October 11, 2026", "venue": "Live @ WAYO", "city": "Rochester, NY", "notes": "Tune in at 2PM via 104.3FM in the Roc area, WAYOFM.org, or their YouTube channel"},
+    { "date": "October 28, 2026", "venue": "Photo City Music Hall", "city": "Rochester, NY", "notes":"6PM doors, contact via Instagram or Email for tickets"}
   ],
   "previous": [
     { "date": "November 16, 2025", "venue": "Photo City Music Hall", "city": "Rochester, NY", "notes": "18+, Doors at 6pm" },

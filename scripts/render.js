@@ -20,7 +20,11 @@ async function renderData(name, opts = {}) {
     const raw = await fs.readFile(dataPath, 'utf8');
     const data = JSON.parse(raw);
     // allow rendering a specific list (upcoming/previous) via opts.listId
-    const items = opts.listId && Array.isArray(data[opts.listId]) ? data[opts.listId] : (Array.isArray(data.items) ? data.items : []);
+    let items = opts.listId && Array.isArray(data[opts.listId]) ? data[opts.listId] : (Array.isArray(data.items) ? data.items : []);
+    if (Array.isArray(opts.excludeTypes)) {
+      const excludedTypes = opts.excludeTypes.map(type => String(type).toLowerCase());
+      items = items.filter(item => !excludedTypes.includes(String(item.type || '').toLowerCase()));
+    }
 
     // build description separately
     const descriptionHtml = data.description ? `<p>${escapeHtml(data.description)}</p>` : '';
@@ -148,9 +152,11 @@ async function build() {
     try {
       let html = await fs.readFile(srcPath, 'utf8');
       const name = path.basename(page, '.html');
-      const rendered = await renderData(name);
+      const isContactPage = name === 'contact';
+      const rendered = await renderData(name, isContactPage ? { excludeTypes: ['email'] } : {});
       // Inject members/content into #page-content (common case)
-      html = html.replace(/<div id="page-content">[\s\S]*?<\/div>/i, `<div id="page-content">${rendered.contentHtml || ''}</div>`);
+      const contentId = isContactPage ? 'social-media-content' : 'page-content';
+      html = html.replace(new RegExp(`<div id="${contentId}">[\\s\\S]*?<\\/div>`, 'i'), `<div id="${contentId}">${rendered.contentHtml || ''}</div>`);
       // Inject band description into #band-bio if present
       html = html.replace(/<div id="band-bio">[\s\S]*?<\/div>/i, `<div id="band-bio">${rendered.descriptionHtml || ''}</div>`);
       // No special-case injection for songs; songs are managed directly in songs.html

@@ -1,5 +1,31 @@
 {
   "title": "Welcome",
   "description": "Welcome to the Obsidian Star Band official site.",
-  "items": []
+  "items": [],
+  "photos": [
+    {
+      "src": "assets/photos/band1.jpg",
+      "alt": "Obsidian Star band photo"
+    },
+    {
+      "src": "assets/photos/band2.jpg",
+      "alt": "Obsidian Star band photo"
+    },
+    {
+      "src": "assets/photos/band3.png",
+      "alt": "Obsidian Star band photo"
+    },
+    {
+      "src": "assets/photos/band4.jpg",
+      "alt": "Obsidian Star band photo"
+    },
+    {
+      "src": "assets/photos/band5.jpg",
+      "alt": "Obsidian Star band photo"
+    },
+    {
+      "src": "assets/photos/band6.png",
+      "alt": "Obsidian Star band photo"
+    }
+  ]
 }

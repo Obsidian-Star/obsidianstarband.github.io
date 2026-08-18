@@ -155,7 +155,11 @@
         <tr>
           <td>
             <h2>Booking &amp; General Inquiries</h2>
-            <div id="page-content"></div>
+            <div id="page-content">
+              <p><a href="mailto:obsidianstar.band@gmail.com">obsidianstar.band@gmail.com</a></p>
+            </div>
+            <h2>Follow Us on Social Media</h2>
+            <div id="social-media-content"></div>
           </td>
         </tr>
       </table>
@@ -170,7 +174,11 @@
 <script src="assets/js/load-data.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    if (window.loadPageData) loadPageData('contact', { targetId: 'page-content', skipTitle: true }).catch(() => {});
+    if (window.loadPageData) loadPageData('contact', {
+      targetId: 'social-media-content',
+      skipTitle: true,
+      excludeTypes: ['email']
+    }).catch(() => {});
   });
 </script>
 
