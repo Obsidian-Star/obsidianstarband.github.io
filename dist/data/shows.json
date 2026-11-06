@@ -2,11 +2,13 @@
   "title": "Shows",
   "description": "Upcoming and previous performances.",
   "upcoming": [
-    { "date": "September 19, 2026", "venue": "Fringe Fest @ The Little Theater", "city": "Rochester, NY", "notes": "9PM show, Free Entry, contact for more info"},
-    { "date": "October 11, 2026", "venue": "Live @ WAYO", "city": "Rochester, NY", "notes": "Tune in at 2PM via 104.3FM in the Roc area, WAYOFM.org, or their YouTube channel"},
-    { "date": "October 28, 2026", "venue": "Photo City Music Hall", "city": "Rochester, NY", "notes":"6PM doors, contact via Instagram or Email for tickets"}
   ],
   "previous": [
+    { "date": "November 7, 2026", "venue":"RIT Pedal Builders Halloween Party", "city":"Rochester, NY", "notes": "6PM Bamboo Room SAU, open to RIT students"},
+    { "date": "October 28, 2026", "venue": "Photo City Music Hall", "city": "Rochester, NY", "notes":"6PM doors, contact via Instagram or Email for tickets"},
+    { "date": "October 21, 2027", "venue": "Popular Music Collective Night @ Lovin' Cup", "city": "Rochester, NY", "notes":"18+, $5 cover, 7-9pm"},
+    { "date": "October 11, 2026", "venue": "Live @ WAYO", "city": "Rochester, NY", "notes": "Tune in at 2PM via 104.3FM in the Roc area, WAYOFM.org, or their YouTube channel"},
+    { "date": "September 19, 2026", "venue": "Fringe Fest @ The Little Theater", "city": "Rochester, NY", "notes": "9PM show, Free Entry, contact for more info"},
     { "date": "November 16, 2025", "venue": "Photo City Music Hall", "city": "Rochester, NY", "notes": "18+, Doors at 6pm" },
     { "date": "November 1, 2025", "venue": "Halloween Hangover Fest @ Flying Squirrel", "city": "Rochester, NY", "notes": "$10 suggested donation, On at 2:15pm" },
     { "date": "September 24, 2025", "venue": "Popular Music Collective Night @ Lovin' Cup", "city": "Rochester, NY", "notes": "18+, $5 cover, 7-9pm" },
